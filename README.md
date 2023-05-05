@@ -6,6 +6,9 @@ Instead of paying for ZapGPT, you can use your own OpenAI keys and just pay for 
 
 It uses Rust so it's way more efficient if you use it on serverless architecture.
 
+## Demo
+
+https://user-images.githubusercontent.com/4844547/236584312-8145df5a-350c-4231-aa38-d0ed14b21098.mp4
 
 ## Getting the keys
 
