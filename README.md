@@ -48,7 +48,7 @@ After running the first time, you need to enable the webhook in [Facebook Develo
 
 Use `https://<ngrok hostname>/webhook` as the URL and the value in `WEBHOOK_VERIFY_TOKEN` as token verification.
 
-If you received a message with `Received webhook request from whatspp` in your console, you are ready to send messages to your own personal chatbot.
+If you received a message with `WEBHOOK_VERIFIED` in your console, you are ready to send messages to your own personal chatbot.
 
 
 ## Current limitations

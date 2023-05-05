@@ -1,3 +1,5 @@
+use std::env;
+
 use crate::webhook::{MessageSender, WebhookBody};
 use axum::{
     extract::{Query, State},
@@ -25,7 +27,7 @@ pub async fn get_webhook(Query(hub): Query<Hub>) -> impl IntoResponse {
     match (&hub.mode, &hub.token) {
         (Some(mode), Some(token)) => {
             // Checks the mode and token sent is correct
-            if mode == "subscribe" && token == verify_token {
+            if mode == "subscribe" && token == &verify_token {
                 // Responds with the challenge token from the request
                 println!("WEBHOOK_VERIFIED");
                 (StatusCode::OK, hub.challenge.clone())
