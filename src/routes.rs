@@ -19,8 +19,7 @@ pub struct Hub {
 
 pub async fn get_webhook(Query(hub): Query<Hub>) -> impl IntoResponse {
     // Your verify token. Should be a random string.
-    let f = std::fs::read_to_string("verify_token.txt").unwrap();
-    let verify_token = f.trim();
+    let verify_token = env::var("WEBHOOK_VERIFY_TOKEN").unwrap();
 
     // Checks if a token and mode is in the query string of the request
     match (&hub.mode, &hub.token) {
